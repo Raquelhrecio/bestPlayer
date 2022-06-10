@@ -1,0 +1,2 @@
+class NumPlayersException(Exception):
+    pass
