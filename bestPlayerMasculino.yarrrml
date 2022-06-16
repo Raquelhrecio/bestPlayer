@@ -1,0 +1,154 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rev: http://purl.org/stuff/rev#
+  schema: http://schema.org/
+  dct: http://purl.org/dc/terms/
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  vocab: http://example.org#
+  soccer: http://www.bestPlayer.com/ontology#
+
+  
+mappings:
+  futbolistas_masculino:
+    sources:
+      - [C:/Users/raque/Documents/data/players-22-csv~csv]
+    s: http://bestPlayer.com/recurso/futbolista/$(sofifa_id)
+    po:
+      - [a, schema:Person]
+      - [a, soccer:Futbolista]
+      - [schema:name,$(long_name)]
+      - [schema:url,$(player_url)~iri]
+      - [schema:alternateName,$(short_name)]
+      - [soccer:posicion,$(player_positions)]
+      - [soccer:media,$(overall),xsd:integer]
+      - [soccer:valorMercado,$(value_eur),xsd:integer]
+      - [soccer:sueldo,$(wage_eur),xsd:integer]
+      - [soccer:edad,$(age),xsd:integer]
+      - [schema:height,$(height_cm),xsd:integer]
+      - [soccer:peso,$(weight_kg),xsd:integer]
+      - [soccer:posicionClub,$(club_position)]
+      - [soccer:dorsalClub,$(club_jersey_number),xsd:integer]
+      - [soccer:clubOrigen,$(club_loaned_from)]
+      - [soccer:llegadaClub,$(club_joined),xsd:date]
+      - [soccer:finalizacionContrato,$(club_contract_valid_until),xsd:integer]
+      - [soccer:añosRestantes,$(remaining_years),xsd:integer] 
+      - [soccer:posicionSeleccion,$(nation_position)]
+      - [soccer:dorsalSeleccion,$(nation_jersey_number),xsd:integer]
+      - [soccer:pieBueno,$(preferred_foot)]
+      - [soccer:precisionPieMalo,$(weak_foot),xsd:integer]
+      - [soccer:habilidadMovimientos,$(skill_moves),xsd:integer]
+      - [soccer:reputacionInternacional,$(international_reputation),xsd:integer]
+      - [soccer:tasaTrabajo,$(work_rate)]
+      - [soccer:tipoCuerpo,$(body_type)]
+      - [soccer:clausulaRescision,$(release_clause_eur),xsd:integer]
+      - [soccer:etiqueta,$(player_tags)]
+      - [soccer:rasgo,$(player_traits)]
+      - [soccer:atributosRitmo,$(pace),xsd:integer]
+      - [soccer:aceleracion,$(movement_acceleration),xsd:integer]
+      - [soccer:sprint,$(movement_sprint_speed),xsd:integer]
+      - [soccer:atributosDisparo,$(shooting),xsd:integer]
+      - [soccer:finalizacion,$(attacking_finishing),xsd:integer]
+      - [soccer:penaltis,$(mentality_penalties),xsd:integer]
+      - [soccer:posicionamiento,$(mentality_positioning),xsd:integer]
+      - [soccer:potenciaTiro,$(power_shot_power),xsd:integer]
+      - [soccer:potenciaTiroLejano,$(power_long_shots),xsd:integer]
+      - [soccer:atributosPase,$(passing),xsd:integer]
+      - [soccer:centros,$(attacking_crossing),xsd:integer]
+      - [soccer:habilidadCurva,$(skill_curve),xsd:integer]
+      - [soccer:pasesCortos,$(attacking_short_passing),xsd:integer]
+      - [soccer:pasesLargos,$(skill_long_passing),xsd:integer]
+      - [soccer:precisionTirosLibres,$(skill_fk_accuracy),xsd:integer]
+      - [soccer:vision,$(mentality_vision),xsd:integer]
+      - [soccer:atributosRegate,$(dribbling),xsd:integer]
+      - [soccer:agilidad,$(movement_agility),xsd:integer]
+      - [soccer:compostura,$(mentality_composure),xsd:integer]
+      - [soccer:controlBalon,$(skill_ball_control),xsd:integer]
+      - [soccer:equilibrio,$(movement_balance),xsd:integer]
+      - [soccer:habilidadRegate,$(skill_dribbling),xsd:integer]
+      - [soccer:reacciones,$(movement_reactions),xsd:integer]
+      - [soccer:atributosDefensa,$(defending),xsd:integer]
+      - [soccer:entrada,$(defending_standing_tackle),xsd:integer]
+      - [soccer:entradaAgresiva,$(defending_sliding_tackle),xsd:integer]
+      - [soccer:intercepcion,$(mentality_interceptions),xsd:integer]
+      - [soccer:marcaje,$(defending_marking_awareness),xsd:integer]
+      - [soccer:precisionCabezazos,$(heading_accuracy),xsd:integer]
+      - [soccer:atributosFisico,$(physic),xsd:integer]
+      - [soccer:agresion,$(mentality_aggression),xsd:integer]
+      - [soccer:fuerza,$(power_strength),xsd:integer]
+      - [soccer:resistencia,$(power_stamina),xsd:integer]
+      - [soccer:salto,$(power_jumping),xsd:integer]
+      - [soccer:estirada,$(goalkeeping_diving),xsd:integer]
+      - [soccer:juegoManos,$(goalkeeping_handling),xsd:integer]
+      - [soccer:posicionamientoPortero,$(goalkeeping_positioning),xsd:integer]
+      - [soccer:reflejos,$(goalkeeping_reflexes),xsd:integer]
+      - [soccer:saque,$(goalkeeping_kicking),xsd:integer]
+      - [soccer:velocidadPortero,$(goalkeeping_speed),xsd:integer]
+      - [soccer:habilidadLs,$(ls),xsd:integer]
+      - [soccer:habilidadSt,$(st),xsd:integer]
+      - [soccer:habilidadRs,$(rs),xsd:integer]
+      - [soccer:habilidadLw,$(lw),xsd:integer]
+      - [soccer:habilidadLf,$(lf),xsd:integer]
+      - [soccer:habilidadCf,$(cf),xsd:integer]
+      - [soccer:habilidadRf,$(rf),xsd:integer]
+      - [soccer:habilidadRw,$(rw),xsd:integer]
+      - [soccer:habilidadLam,$(lam),xsd:integer]
+      - [soccer:habilidadCam,$(cam),xsd:integer]
+      - [soccer:habilidadRam,$(ram),xsd:integer]
+      - [soccer:habilidadLcm,$(lcm),xsd:integer]
+      - [soccer:habilidadCm,$(cm),xsd:integer]
+      - [soccer:habilidadRcm,$(rcm),xsd:integer]
+      - [soccer:habilidadRm,$(rm),xsd:integer]
+      - [soccer:habilidadLwb,$(lwb),xsd:integer]
+      - [soccer:habilidadLdm,$(ldm),xsd:integer]
+      - [soccer:habilidadCdm,$(cdm),xsd:integer]
+      - [soccer:habilidadRdm,$(rdm),xsd:integer]
+      - [soccer:habilidadRwb,$(rwb),xsd:integer]
+      - [soccer:habilidadLb,$(lb)]
+      - [soccer:habilidadLcb,$(lcb),xsd:integer]
+      - [soccer:habilidadCb,$(cb),xsd:integer]
+      - [soccer:habilidadRcb,$(rcb),xsd:integer]
+      - [soccer:habilidadRb,$(rb),xsd:integer]
+      - [soccer:habilidadGk,$(gk),xsd:integer]
+      - [owl:sameAs, $(wikidata_player)~iri]
+      - p: soccer:tieneNacionalidad
+        o:
+          - mapping: nacionalidad_masculino
+          
+      - p: soccer:juegaEnClub
+        o: 
+          - mapping: club_masculino
+          
+      - p: soccer:juegaEnSeleccion
+        o: 
+          - mapping: seleccion_masculino
+          
+  nacionalidad_masculino:
+    sources:
+      - [C:/Users/raque/Documents/data/players-22-csv~csv]
+    s: http://bestPlayer.com/recurso/nacionalidad/$(nationality_id)
+    po:
+      - [a, schema:Country]
+	  - [schema:name, $ (nationality_name)]
+      
+  club_masculino:
+    sources: 
+      - [C:/Users/raque/Documents/data/players-22-csv~csv]
+    s: http://bestPlayer.com/recurso/club/$(club_team_id)
+    po:
+      - [a, soccer:Club]
+      - [schema:name,$(club_name)]
+      - [soccer:liga_club,$(league_name)]
+      - [soccer:liga_division,$(league_level),xsd:integer]
+  
+  seleccion_masculino:
+    sources: 
+      - [C:/Users/raque/Documents/data/players-22-csv~csv]
+    s: http://bestPlayer.com/recurso/seleccion/$(nation_team_id)
+    po:
+      - [a, soccer:Seleccion]
+      - [schema:name,$(nationality_name)]
